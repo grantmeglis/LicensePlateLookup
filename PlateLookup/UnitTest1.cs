@@ -1,5 +1,7 @@
 using System;
 using Xunit;
+using PageFramework;
+using PageFramework.Pages;
 
 namespace PlateLookup
 {
@@ -8,8 +10,10 @@ namespace PlateLookup
         [Fact]
         public void Test1()
         {
-
-
+            Browser.Initialize();
+            var VirginiaPage = new VirginiaPage();
+            VirginiaPage.Goto();
+            Browser.Close();
         }
     }
 }

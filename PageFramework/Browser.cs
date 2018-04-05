@@ -15,9 +15,11 @@ namespace PageFramework
 
         public static void Initialize()
         {
-            _webDriver = new ChromeDriver(@"..\..\..\PageFramework\bin\Debug\netcoreapp2.0");
+            _webDriver = new ChromeDriver(@"C:\Repositories\grantmeglis\LicensePlateLookup\PageFramework\bin\Debug\netcoreapp2.0");
             Goto("");
         }
+
+        public static void Close() { _webDriver.Close(); }
 
         public static void Goto(string url)
         {
